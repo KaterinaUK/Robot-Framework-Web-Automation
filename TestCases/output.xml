@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200727 18:22:57.152" rpa="false">
+<suite id="s1" name="LoginTest" source="C:\Users\Dale\PycharmProjects\InterviewTaskRobot2\TestCases\LoginTest.robot">
+<test id="s1-t1" name="TC1: Create one New Page + Verify Published">
+<kw name="Start TestCase" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://katerina-techinterview.otgs.work/wp-admin/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200727 18:22:58.085" level="INFO">Opening browser 'chrome' to base url 'https://katerina-techinterview.otgs.work/wp-admin/'.</msg>
+<status status="PASS" starttime="20200727 18:22:58.085" endtime="20200727 18:23:03.934"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200727 18:23:03.935" endtime="20200727 18:23:06.108"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:22:58.084" endtime="20200727 18:23:06.108"></status>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginPageLoginUsername}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:06.110" level="INFO">Typing text 'katerinaadmin' into text field 'xpath://input[@id='user_login']'.</msg>
+<status status="PASS" starttime="20200727 18:23:06.109" endtime="20200727 18:23:06.407"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:06.109" endtime="20200727 18:23:06.408"></status>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arguments>
+<arg>${pwd}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginPageLoginPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:06.410" level="INFO">Typing text 'Z^Mt.fVQT~oB' into text field 'xpath://input[@id='user_pass']'.</msg>
+<status status="PASS" starttime="20200727 18:23:06.409" endtime="20200727 18:23:06.632"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:06.408" endtime="20200727 18:23:06.633"></status>
+</kw>
+<kw name="Click SignIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginPageSignInButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:06.637" level="INFO">Clicking button 'xpath://input[@id='wp-submit']'.</msg>
+<status status="PASS" starttime="20200727 18:23:06.636" endtime="20200727 18:23:10.045"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:06.634" endtime="20200727 18:23:10.046"></status>
+</kw>
+<kw name="Verify Succesful Login" library="LoginKeywords">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Dashboard ‹ My WordPress Website — WordPress</arg>
+</arguments>
+<msg timestamp="20200727 18:23:10.079" level="INFO">Page title is 'Dashboard ‹ My WordPress Website — WordPress'.</msg>
+<status status="PASS" starttime="20200727 18:23:10.047" endtime="20200727 18:23:10.080"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:10.046" endtime="20200727 18:23:10.080"></status>
+</kw>
+<kw name="Add New Page" library="LoginKeywords">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${HomePageNewMenu}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:10.083" level="INFO">Simulating Mouse Over on element 'xpath://span[@class='ab-label']'.</msg>
+<status status="PASS" starttime="20200727 18:23:10.082" endtime="20200727 18:23:10.427"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${HomePageAddNewPage}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:10.428" level="INFO">Clicking element 'xpath://a[@class='ab-item'][contains(text(),'Page')]'.</msg>
+<status status="PASS" starttime="20200727 18:23:10.428" endtime="20200727 18:23:18.245"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:23:19.256" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:23:18.245" endtime="20200727 18:23:19.256"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:10.081" endtime="20200727 18:23:19.257"></status>
+</kw>
+<kw name="Escape Popups" library="LoginKeywords">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ESCAPE</arg>
+</arguments>
+<msg timestamp="20200727 18:23:19.259" level="INFO">Sending key(s) ('ESCAPE',) to page.</msg>
+<msg timestamp="20200727 18:23:19.259" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg timestamp="20200727 18:23:19.260" level="INFO">Releasing special key ESCAPE.</msg>
+<status status="PASS" starttime="20200727 18:23:19.258" endtime="20200727 18:23:19.307"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ClickMenuButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:19.308" level="INFO">Clicking element 'xpath://div[@class='components-dropdown components-dropdown-menu edit-post-more-menu']//button[@class='components-button components-dropdown-menu__toggle has-icon']//*[local-name()='svg']'.</msg>
+<status status="PASS" starttime="20200727 18:23:19.307" endtime="20200727 18:23:19.688"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${ClickCodeEditorButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:19.689" level="INFO">Clicking button 'xpath://button[@class='components-button components-menu-item__button components-menu-items-choice']'.</msg>
+<status status="PASS" starttime="20200727 18:23:19.688" endtime="20200727 18:23:20.025"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:23:21.034" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:23:20.025" endtime="20200727 18:23:21.035"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:19.257" endtime="20200727 18:23:21.035"></status>
+</kw>
+<kw name="Type Content + Title" library="LoginKeywords">
+<kw name="Word" library="FakerLibrary">
+<doc>:returns: A random word, eg: 'lorem'</doc>
+<assign>
+<var>${pageword}</var>
+</assign>
+<msg timestamp="20200727 18:23:21.037" level="INFO">${pageword} = network</msg>
+<status status="PASS" starttime="20200727 18:23:21.036" endtime="20200727 18:23:21.037"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Title used: ${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:21.037" level="INFO">Title used: network</msg>
+<status status="PASS" starttime="20200727 18:23:21.037" endtime="20200727 18:23:21.037"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${NewPageAddTitle}</arg>
+<arg>${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:21.038" level="INFO">Typing text 'network' into text field 'xpath://textarea[@placeholder='Add title']'.</msg>
+<status status="PASS" starttime="20200727 18:23:21.037" endtime="20200727 18:23:21.339"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:21.340" level="INFO">${pageword} = network</msg>
+<status status="PASS" starttime="20200727 18:23:21.339" endtime="20200727 18:23:21.340"></status>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<doc>:returns: A single paragraph. For example: 'Sapiente sunt omnis. Ut
+    pariatur ad autem ducimus et. Voluptas rem voluptas sint modi dolorem amet.'</doc>
+<assign>
+<var>${paragraph}</var>
+</assign>
+<msg timestamp="20200727 18:23:21.342" level="INFO">${paragraph} = Democratic often avoid blood property. Inside piece black report herself anything. Save method suffer reality.</msg>
+<status status="PASS" starttime="20200727 18:23:21.341" endtime="20200727 18:23:21.342"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Title used: ${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:21.343" level="INFO">Title used: Democratic often avoid blood property. Inside piece black report herself anything. Save method suffer reality.</msg>
+<status status="PASS" starttime="20200727 18:23:21.343" endtime="20200727 18:23:21.343"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${NewPageAddContent}</arg>
+<arg>${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:21.344" level="INFO">Typing text 'Democratic often avoid blood property. Inside piece black report herself anything. Save method suffer reality.' into text field 'xpath://textarea[@placeholder='Start writing with text or HTML']'.</msg>
+<status status="PASS" starttime="20200727 18:23:21.344" endtime="20200727 18:23:22.596"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:22.597" level="INFO">${paragraph} = Democratic often avoid blood property. Inside piece black report herself anything. Save method suffer reality.</msg>
+<status status="PASS" starttime="20200727 18:23:22.597" endtime="20200727 18:23:22.597"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:23:23.606" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:23:22.598" endtime="20200727 18:23:23.606"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:21.035" endtime="20200727 18:23:23.606"></status>
+</kw>
+<kw name="Publish" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${PublishButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:23.609" level="INFO">Clicking button 'xpath://button[@class='components-button editor-post-publish-panel__toggle editor-post-publish-button__button is-primary']'.</msg>
+<status status="PASS" starttime="20200727 18:23:23.608" endtime="20200727 18:23:23.748"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${PublishButton2}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:23.749" level="INFO">Clicking button 'xpath://button[@class='components-button editor-post-publish-button editor-post-publish-button__button is-primary']'.</msg>
+<status status="PASS" starttime="20200727 18:23:23.749" endtime="20200727 18:23:23.959"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:23:24.964" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:23:23.960" endtime="20200727 18:23:24.964"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:23.607" endtime="20200727 18:23:24.964"></status>
+</kw>
+<kw name="Open Published Page" library="LoginKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ViewPageButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:24.970" level="INFO">Clicking element 'xpath://div[@class='components-panel__body post-publish-panel__postpublish-header is-opened']//a'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200727 18:23:26.853" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200727 18:23:26.141" endtime="20200727 18:23:26.854"></status>
+</kw>
+<msg timestamp="20200727 18:23:26.856" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="https://katerina-techinterview.otgs.work/.../"&gt;network&lt;/a&gt; is not clickable at point (1041, 80). Other element would receive the click: &lt;div class="components-menu-group"&gt;...&lt;/div&gt;
+  (Session info: chrome=84.0.4147.89)
+</msg>
+<status status="FAIL" starttime="20200727 18:23:24.968" endtime="20200727 18:23:26.857"></status>
+</kw>
+<status status="FAIL" starttime="20200727 18:23:24.965" endtime="20200727 18:23:26.857"></status>
+</kw>
+<kw name="Finish TestCase" library="LoginKeywords" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200727 18:23:26.858" endtime="20200727 18:23:29.184"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:26.857" endtime="20200727 18:23:29.184"></status>
+</kw>
+<status status="FAIL" starttime="20200727 18:22:58.082" endtime="20200727 18:23:29.184" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="https://katerina-techinterview.otgs.work/.../"&gt;network&lt;/a&gt; is not clickable at point (1041, 80). Other element would receive the click: &lt;div class="components-menu-group"&gt;...&lt;/div&gt;
+  (Session info: chrome=84.0.4147.89)
+</status>
+</test>
+<test id="s1-t2" name="TC2: Creat X amount of pages">
+<kw name="Start TestCase" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://katerina-techinterview.otgs.work/wp-admin/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200727 18:23:29.186" level="INFO">Opening browser 'chrome' to base url 'https://katerina-techinterview.otgs.work/wp-admin/'.</msg>
+<status status="PASS" starttime="20200727 18:23:29.186" endtime="20200727 18:23:34.661"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200727 18:23:34.661" endtime="20200727 18:23:36.842"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:29.186" endtime="20200727 18:23:36.844"></status>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arguments>
+<arg>${user}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginPageLoginUsername}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:36.848" level="INFO">Typing text 'katerinaadmin' into text field 'xpath://input[@id='user_login']'.</msg>
+<status status="PASS" starttime="20200727 18:23:36.847" endtime="20200727 18:23:37.025"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:36.845" endtime="20200727 18:23:37.025"></status>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arguments>
+<arg>${pwd}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginPageLoginPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:37.026" level="INFO">Typing text 'Z^Mt.fVQT~oB' into text field 'xpath://input[@id='user_pass']'.</msg>
+<status status="PASS" starttime="20200727 18:23:37.026" endtime="20200727 18:23:37.159"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:37.026" endtime="20200727 18:23:37.160"></status>
+</kw>
+<kw name="Click SignIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginPageSignInButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:37.160" level="INFO">Clicking button 'xpath://input[@id='wp-submit']'.</msg>
+<status status="PASS" starttime="20200727 18:23:37.160" endtime="20200727 18:23:41.778"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:37.160" endtime="20200727 18:23:41.779"></status>
+</kw>
+<kw name="Verify Succesful Login" library="LoginKeywords">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Dashboard ‹ My WordPress Website — WordPress</arg>
+</arguments>
+<msg timestamp="20200727 18:23:41.790" level="INFO">Page title is 'Dashboard ‹ My WordPress Website — WordPress'.</msg>
+<status status="PASS" starttime="20200727 18:23:41.779" endtime="20200727 18:23:41.791"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:41.779" endtime="20200727 18:23:41.792"></status>
+</kw>
+<kw name="Add New Page" library="LoginKeywords">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${HomePageNewMenu}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:41.793" level="INFO">Simulating Mouse Over on element 'xpath://span[@class='ab-label']'.</msg>
+<status status="PASS" starttime="20200727 18:23:41.792" endtime="20200727 18:23:42.106"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${HomePageAddNewPage}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:42.107" level="INFO">Clicking element 'xpath://a[@class='ab-item'][contains(text(),'Page')]'.</msg>
+<status status="PASS" starttime="20200727 18:23:42.106" endtime="20200727 18:23:51.208"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:23:52.211" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:23:51.208" endtime="20200727 18:23:52.211"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:41.792" endtime="20200727 18:23:52.211"></status>
+</kw>
+<kw name="Escape Popups" library="LoginKeywords">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ESCAPE</arg>
+</arguments>
+<msg timestamp="20200727 18:23:52.212" level="INFO">Sending key(s) ('ESCAPE',) to page.</msg>
+<msg timestamp="20200727 18:23:52.212" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg timestamp="20200727 18:23:52.212" level="INFO">Releasing special key ESCAPE.</msg>
+<status status="PASS" starttime="20200727 18:23:52.212" endtime="20200727 18:23:52.255"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ClickMenuButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:52.255" level="INFO">Clicking element 'xpath://div[@class='components-dropdown components-dropdown-menu edit-post-more-menu']//button[@class='components-button components-dropdown-menu__toggle has-icon']//*[local-name()='svg']'.</msg>
+<status status="PASS" starttime="20200727 18:23:52.255" endtime="20200727 18:23:52.375"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${ClickCodeEditorButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:52.376" level="INFO">Clicking button 'xpath://button[@class='components-button components-menu-item__button components-menu-items-choice']'.</msg>
+<status status="PASS" starttime="20200727 18:23:52.375" endtime="20200727 18:23:52.592"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:23:53.602" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:23:52.592" endtime="20200727 18:23:53.603"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:52.211" endtime="20200727 18:23:53.603"></status>
+</kw>
+<kw name="Type Content + Title" library="LoginKeywords">
+<kw name="Word" library="FakerLibrary">
+<doc>:returns: A random word, eg: 'lorem'</doc>
+<assign>
+<var>${pageword}</var>
+</assign>
+<msg timestamp="20200727 18:23:53.604" level="INFO">${pageword} = financial</msg>
+<status status="PASS" starttime="20200727 18:23:53.603" endtime="20200727 18:23:53.604"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Title used: ${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:53.605" level="INFO">Title used: financial</msg>
+<status status="PASS" starttime="20200727 18:23:53.604" endtime="20200727 18:23:53.605"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${NewPageAddTitle}</arg>
+<arg>${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:53.605" level="INFO">Typing text 'financial' into text field 'xpath://textarea[@placeholder='Add title']'.</msg>
+<status status="PASS" starttime="20200727 18:23:53.605" endtime="20200727 18:23:53.874"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:53.875" level="INFO">${pageword} = financial</msg>
+<status status="PASS" starttime="20200727 18:23:53.874" endtime="20200727 18:23:53.875"></status>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<doc>:returns: A single paragraph. For example: 'Sapiente sunt omnis. Ut
+    pariatur ad autem ducimus et. Voluptas rem voluptas sint modi dolorem amet.'</doc>
+<assign>
+<var>${paragraph}</var>
+</assign>
+<msg timestamp="20200727 18:23:53.876" level="INFO">${paragraph} = Require ok major safe over. Next author deep significant. Expert hope practice or finish. Leg pick science natural.</msg>
+<status status="PASS" starttime="20200727 18:23:53.875" endtime="20200727 18:23:53.876"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Title used: ${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:53.876" level="INFO">Title used: Require ok major safe over. Next author deep significant. Expert hope practice or finish. Leg pick science natural.</msg>
+<status status="PASS" starttime="20200727 18:23:53.876" endtime="20200727 18:23:53.876"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${NewPageAddContent}</arg>
+<arg>${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:53.877" level="INFO">Typing text 'Require ok major safe over. Next author deep significant. Expert hope practice or finish. Leg pick science natural.' into text field 'xpath://textarea[@placeholder='Start writing with text or HTML']'.</msg>
+<status status="PASS" starttime="20200727 18:23:53.876" endtime="20200727 18:23:55.110"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:55.111" level="INFO">${paragraph} = Require ok major safe over. Next author deep significant. Expert hope practice or finish. Leg pick science natural.</msg>
+<status status="PASS" starttime="20200727 18:23:55.110" endtime="20200727 18:23:55.111"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:23:56.117" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:23:55.111" endtime="20200727 18:23:56.117"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:53.603" endtime="20200727 18:23:56.118"></status>
+</kw>
+<kw name="Publish" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${PublishButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:56.119" level="INFO">Clicking button 'xpath://button[@class='components-button editor-post-publish-panel__toggle editor-post-publish-button__button is-primary']'.</msg>
+<status status="PASS" starttime="20200727 18:23:56.119" endtime="20200727 18:23:56.281"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${PublishButton2}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:56.282" level="INFO">Clicking button 'xpath://button[@class='components-button editor-post-publish-button editor-post-publish-button__button is-primary']'.</msg>
+<status status="PASS" starttime="20200727 18:23:56.282" endtime="20200727 18:23:56.478"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:23:57.486" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:23:56.479" endtime="20200727 18:23:57.486"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:56.118" endtime="20200727 18:23:57.487"></status>
+</kw>
+<kw name="Open Published Page" library="LoginKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ViewPageButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:23:57.488" level="INFO">Clicking element 'xpath://div[@class='components-panel__body post-publish-panel__postpublish-header is-opened']//a'.</msg>
+<status status="PASS" starttime="20200727 18:23:57.487" endtime="20200727 18:23:58.758"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200727 18:24:01.768" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200727 18:23:58.758" endtime="20200727 18:24:01.768"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:23:57.487" endtime="20200727 18:24:01.769"></status>
+</kw>
+<kw name="Check Published Content" library="LoginKeywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:01.791" level="INFO">Current page contains text 'financial'.</msg>
+<status status="PASS" starttime="20200727 18:24:01.770" endtime="20200727 18:24:01.791"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:01.813" level="INFO">Current page contains text 'Require ok major safe over. Next author deep significant. Expert hope practice or finish. Leg pick science natural.'.</msg>
+<status status="PASS" starttime="20200727 18:24:01.792" endtime="20200727 18:24:01.813"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200727 18:24:03.826" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200727 18:24:01.813" endtime="20200727 18:24:03.826"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:24:01.769" endtime="20200727 18:24:03.826"></status>
+</kw>
+<kw name="Repeat Keyword" library="BuiltIn">
+<doc>Executes the specified keyword multiple times.</doc>
+<arguments>
+<arg>${CreateNewPageCount}</arg>
+<arg>Repeat New Page Many Times</arg>
+</arguments>
+<msg timestamp="20200727 18:24:03.827" level="INFO">Repeating keyword, round 1/3.</msg>
+<kw name="Repeat New Page Many Times" library="LoginKeywords">
+<kw name="Add New Page" library="LoginKeywords">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${HomePageNewMenu}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:03.828" level="INFO">Simulating Mouse Over on element 'xpath://span[@class='ab-label']'.</msg>
+<status status="PASS" starttime="20200727 18:24:03.828" endtime="20200727 18:24:04.105"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${HomePageAddNewPage}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:04.105" level="INFO">Clicking element 'xpath://a[@class='ab-item'][contains(text(),'Page')]'.</msg>
+<status status="PASS" starttime="20200727 18:24:04.105" endtime="20200727 18:24:06.575"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:24:07.576" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:24:06.576" endtime="20200727 18:24:07.576"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:24:03.828" endtime="20200727 18:24:07.576"></status>
+</kw>
+<kw name="Type Content + Title" library="LoginKeywords">
+<kw name="Word" library="FakerLibrary">
+<doc>:returns: A random word, eg: 'lorem'</doc>
+<assign>
+<var>${pageword}</var>
+</assign>
+<msg timestamp="20200727 18:24:07.578" level="INFO">${pageword} = form</msg>
+<status status="PASS" starttime="20200727 18:24:07.577" endtime="20200727 18:24:07.578"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Title used: ${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:07.578" level="INFO">Title used: form</msg>
+<status status="PASS" starttime="20200727 18:24:07.578" endtime="20200727 18:24:07.578"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${NewPageAddTitle}</arg>
+<arg>${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:07.579" level="INFO">Typing text 'form' into text field 'xpath://textarea[@placeholder='Add title']'.</msg>
+<status status="PASS" starttime="20200727 18:24:07.578" endtime="20200727 18:24:07.713"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${pageword}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:07.714" level="INFO">${pageword} = form</msg>
+<status status="PASS" starttime="20200727 18:24:07.713" endtime="20200727 18:24:07.714"></status>
+</kw>
+<kw name="Paragraph" library="FakerLibrary">
+<doc>:returns: A single paragraph. For example: 'Sapiente sunt omnis. Ut
+    pariatur ad autem ducimus et. Voluptas rem voluptas sint modi dolorem amet.'</doc>
+<assign>
+<var>${paragraph}</var>
+</assign>
+<msg timestamp="20200727 18:24:07.715" level="INFO">${paragraph} = Let within increase bag such natural pressure. Bill get quality teacher performance.</msg>
+<status status="PASS" starttime="20200727 18:24:07.714" endtime="20200727 18:24:07.715"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Title used: ${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:07.715" level="INFO">Title used: Let within increase bag such natural pressure. Bill get quality teacher performance.</msg>
+<status status="PASS" starttime="20200727 18:24:07.715" endtime="20200727 18:24:07.715"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${NewPageAddContent}</arg>
+<arg>${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:07.716" level="INFO">Typing text 'Let within increase bag such natural pressure. Bill get quality teacher performance.' into text field 'xpath://textarea[@placeholder='Start writing with text or HTML']'.</msg>
+<status status="PASS" starttime="20200727 18:24:07.715" endtime="20200727 18:24:08.617"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${paragraph}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:08.618" level="INFO">${paragraph} = Let within increase bag such natural pressure. Bill get quality teacher performance.</msg>
+<status status="PASS" starttime="20200727 18:24:08.617" endtime="20200727 18:24:08.618"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:24:09.622" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:24:08.618" endtime="20200727 18:24:09.622"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:24:07.577" endtime="20200727 18:24:09.623"></status>
+</kw>
+<kw name="Publish" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${PublishButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:09.624" level="INFO">Clicking button 'xpath://button[@class='components-button editor-post-publish-panel__toggle editor-post-publish-button__button is-primary']'.</msg>
+<status status="PASS" starttime="20200727 18:24:09.624" endtime="20200727 18:24:10.022"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${PublishButton2}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:10.023" level="INFO">Clicking button 'xpath://button[@class='components-button editor-post-publish-button editor-post-publish-button__button is-primary']'.</msg>
+<status status="PASS" starttime="20200727 18:24:10.022" endtime="20200727 18:24:10.231"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200727 18:24:11.248" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20200727 18:24:10.231" endtime="20200727 18:24:11.248"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:24:09.623" endtime="20200727 18:24:11.248"></status>
+</kw>
+<kw name="Open Published Page" library="LoginKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ViewPageButton}</arg>
+</arguments>
+<msg timestamp="20200727 18:24:11.249" level="INFO">Clicking element 'xpath://div[@class='components-panel__body post-publish-panel__postpublish-header is-opened']//a'.</msg>
+<status status="PASS" starttime="20200727 18:24:11.249" endtime="20200727 18:24:11.958"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200727 18:24:14.971" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200727 18:24:11.958" endtime="20200727 18:24:14.971"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:24:11.248" endtime="20200727 18:24:14.971"></status>
+</kw>
+<kw name="Check Published Content" library="LoginKeywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${pageword}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200727 18:24:14.976" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+</msg>
+<status status="FAIL" starttime="20200727 18:24:14.973" endtime="20200727 18:24:14.976"></status>
+</kw>
+<msg timestamp="20200727 18:24:14.976" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+</msg>
+<msg timestamp="20200727 18:24:14.978" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+</msg>
+<status status="FAIL" starttime="20200727 18:24:14.972" endtime="20200727 18:24:14.978"></status>
+</kw>
+<status status="FAIL" starttime="20200727 18:24:14.972" endtime="20200727 18:24:14.978"></status>
+</kw>
+<status status="FAIL" starttime="20200727 18:24:03.827" endtime="20200727 18:24:14.978"></status>
+</kw>
+<status status="FAIL" starttime="20200727 18:24:03.826" endtime="20200727 18:24:14.978"></status>
+</kw>
+<kw name="Finish TestCase" library="LoginKeywords" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200727 18:24:14.979" endtime="20200727 18:24:17.105"></status>
+</kw>
+<status status="PASS" starttime="20200727 18:24:14.979" endtime="20200727 18:24:17.105"></status>
+</kw>
+<status status="FAIL" starttime="20200727 18:23:29.185" endtime="20200727 18:24:17.105" critical="yes">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+</status>
+</test>
+<status status="FAIL" starttime="20200727 18:22:57.158" endtime="20200727 18:24:17.106"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" id="s1" name="LoginTest">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200727 18:24:14.976" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+</msg>
+</errors>
+</robot>
